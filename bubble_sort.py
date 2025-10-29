@@ -1,5 +1,17 @@
-def sorter(arr):
-    # Use Python's built-in sort for optimal performance.  This is generally much faster
-    # than implementing a sorting algorithm from scratch in Python.
-    arr.sort()
+def sorter3(arr):
+    for k in range(len(arr)):
+        for j in range(len(arr) - 1):
+            if arr[j] > arr[j + 1]:
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+    return arr
+
+def sorter2(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr) - 1):
+            if arr[j] > arr[j + 1]:
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
     return arr
